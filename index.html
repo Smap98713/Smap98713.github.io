@@ -36,20 +36,28 @@
         li {
             margin: 10px 0;
         }
-        .link {
-            display: inline-block;
+        .link-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
             background-color: #f1f1f1;
             padding: 10px;
             border-radius: 4px;
             width: 100%;
-            text-align: left;
             cursor: pointer;
             border: 1px solid #ccc;
-            font-family: 'Courier New', monospace;
-            margin: 5px 0;
         }
-        .link:hover {
+        .link-container:hover {
             background-color: #e6e6e6;
+        }
+        .link-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .link-url {
+            font-family: 'Courier New', monospace;
+            color: #007BFF;
+            word-break: break-all;
         }
     </style>
 </head>
@@ -58,38 +66,57 @@
         <h1>Рекомендуемые плагины</h1>
         <ul>
             <li>
-                <div class="link" onclick="copyToClipboard('https://smap98713.github.io/interface.js')">
-                    Новый интерфейс - https://smap98713.github.io/interface.js
+                <div class="link-container" onclick="copyToClipboard('https://smap98713.github.io/interface.js')">
+                    <div class="link-title">Новый интерфейс</div>
+                    <div class="link-url">https://smap98713.github.io/interface.js</div>
                 </div>
             </li>
             <li>
-                <div class="link" onclick="copyToClipboard('https://and7ey.github.io/lampa/head_filter.js')">
-                    Настройка шапки - https://and7ey.github.io/lampa/head_filter.js
+                <div class="link-container" onclick="copyToClipboard('https://and7ey.github.io/lampa/head_filter.js')">
+                    <div class="link-title">Настройка шапки</div>
+                    <div class="link-url">https://and7ey.github.io/lampa/head_filter.js</div>
                 </div>
             </li>
             <li>
-                <div class="link" onclick="copyToClipboard('https://smap98713.github.io/nots')">
-                    Убираем видео качества Telesync (TS) - https://smap98713.github.io/nots
+                <div class="link-container" onclick="copyToClipboard('https://smap98713.github.io/nots')">
+                    <div class="link-title">Убираем видео качества Telesync (TS)</div>
+                    <div class="link-url">https://smap98713.github.io/nots</div>
                 </div>
             </li>
             <li>
-                <div class="link" onclick="copyToClipboard('http://193.233.134.21/plugins/menusort')">
-                    Сортировка меню - http://193.233.134.21/plugins/menusort
+                <div class="link-container" onclick="copyToClipboard('http://193.233.134.21/plugins/menusort')">
+                    <div class="link-title">Сортировка меню</div>
+                    <div class="link-url">http://193.233.134.21/plugins/menusort</div>
                 </div>
             </li>
             <li>
-                <div class="link" onclick="copyToClipboard('https://smap98713.github.io/source.js')">
-                    Доп источники описания - https://smap98713.github.io/source.js
+                <div class="link-container" onclick="copyToClipboard('https://smap98713.github.io/source.js')">
+                    <div class="link-title">Доп источники описания</div>
+                    <div class="link-url">https://smap98713.github.io/source.js</div>
                 </div>
             </li>
             <li>
-                <div class="link" onclick="copyToClipboard('http://cub.red/plugin/iptv')">
-                    IPTV - http://cub.red/plugin/iptv
+                <div class="link-container" onclick="copyToClipboard('http://cub.red/plugin/iptv')">
+                    <div class="link-title">IPTV</div>
+                    <div class="link-url">http://cub.red/plugin/iptv</div>
                 </div>
             </li>
             <li>
-                <div class="link" onclick="copyToClipboard('https://smap98713.github.io/cub_off.js')">
-                    Отключение CUB - https://smap98713.github.io/cub_off.js
+                <div class="link-container" onclick="copyToClipboard('https://smap98713.github.io/cub_off.js')">
+                    <div class="link-title">Отключение CUB</div>
+                    <div class="link-url">https://smap98713.github.io/cub_off.js</div>
+                </div>
+            </li>
+            <li>
+                <div class="link-container" onclick="copyToClipboard('https://smap98713.github.io/redirect.js')">
+                    <div class="link-title">Редирект сервера</div>
+                    <div class="link-url">https://smap98713.github.io/redirect.js</div>
+                </div>
+            </li>
+            <li>
+                <div class="link-container" onclick="copyToClipboard('https://smap98713.github.io/setprotect')">
+                    <div class="link-title">Блокировка настроек</div>
+                    <div class="link-url">https://smap98713.github.io/setprotect</div>
                 </div>
             </li>
         </ul>
