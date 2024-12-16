@@ -36,13 +36,20 @@
         li {
             margin: 10px 0;
         }
-        a {
-            text-decoration: none;
-            color: #007BFF;
-            font-weight: bold;
+        .link {
+            display: inline-block;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 4px;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            font-family: 'Courier New', monospace;
+            margin: 5px 0;
         }
-        a:hover {
-            text-decoration: underline;
+        .link:hover {
+            background-color: #e6e6e6;
         }
     </style>
 </head>
@@ -50,14 +57,54 @@
     <div class="container">
         <h1>Рекомендуемые плагины</h1>
         <ul>
-            <li><a href="https://smap98713.github.io/interface.js" target="_blank">Новый интерфейс</a></li>
-            <li><a href="https://and7ey.github.io/lampa/head_filter.js" target="_blank">Настройка шапки</a></li>
-            <li><a href="https://smap98713.github.io/nots" target="_blank">Убираем видео качества Telesync (TS)</a></li>
-            <li><a href="http://193.233.134.21/plugins/menusort" target="_blank">Сортировка меню</a></li>
-            <li><a href="https://smap98713.github.io/source.js" target="_blank">Доп источники описания</a></li>
-            <li><a href="http://cub.red/plugin/iptv" target="_blank">IPTV</a></li>
-            <li><a href="https://smap98713.github.io/cub_off.js" target="_blank">Отключение CUB</a></li>
+            <li>
+                <div class="link" onclick="copyToClipboard('https://smap98713.github.io/interface.js')">
+                    Новый интерфейс - https://smap98713.github.io/interface.js
+                </div>
+            </li>
+            <li>
+                <div class="link" onclick="copyToClipboard('https://and7ey.github.io/lampa/head_filter.js')">
+                    Настройка шапки - https://and7ey.github.io/lampa/head_filter.js
+                </div>
+            </li>
+            <li>
+                <div class="link" onclick="copyToClipboard('https://smap98713.github.io/nots')">
+                    Убираем видео качества Telesync (TS) - https://smap98713.github.io/nots
+                </div>
+            </li>
+            <li>
+                <div class="link" onclick="copyToClipboard('http://193.233.134.21/plugins/menusort')">
+                    Сортировка меню - http://193.233.134.21/plugins/menusort
+                </div>
+            </li>
+            <li>
+                <div class="link" onclick="copyToClipboard('https://smap98713.github.io/source.js')">
+                    Доп источники описания - https://smap98713.github.io/source.js
+                </div>
+            </li>
+            <li>
+                <div class="link" onclick="copyToClipboard('http://cub.red/plugin/iptv')">
+                    IPTV - http://cub.red/plugin/iptv
+                </div>
+            </li>
+            <li>
+                <div class="link" onclick="copyToClipboard('https://smap98713.github.io/cub_off.js')">
+                    Отключение CUB - https://smap98713.github.io/cub_off.js
+                </div>
+            </li>
         </ul>
     </div>
+
+    <script>
+        function copyToClipboard(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('Ссылка скопирована!');
+        }
+    </script>
 </body>
 </html>
