@@ -83,6 +83,27 @@
             }
         });
 
+        // Добавляем новый пункт меню для включения редиректа
+        Lampa.SettingsApi.addParam({
+            component: 'location_redirect',
+            param: {
+                name: 'enable_redirect',
+                type: 'button',
+                values: 'Включить редирект',
+                default: ''
+            },
+            field: {
+                name: 'Включить редирект',
+                description: 'При нажатии будет выполнен редирект на сервер для редиректа.'
+            },
+            onChange: function () {
+                if (redirectServer) {
+                    console.warn("Выполнен редирект...");
+                    window.location.href = server_protocol + redirectServer;
+                }
+            }
+        });
+
         setInterval(function () {
             if (currentServer && redirectServer) {
                 pingServer(server_protocol + currentServer, function (isOnline) {
